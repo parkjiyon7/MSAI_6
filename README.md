@@ -3,6 +3,9 @@ MS AI School python 코드로 머신러닝
 
 ## 실습1 - 회귀_광고 플랫폼에 따른 판매량 예측
 
+file name
+regression_광고플랫폼에따른판매량예측_20250122.ipynb
+
 데이터 수집
 https://www.kaggle.com/datasets/ashydv/advertising-dataset
 
