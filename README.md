@@ -20,8 +20,8 @@ https://www.kaggle.com/datasets/ashydv/advertising-dataset
 다항 회귀
 Ridge
 
-
-
+  
+  
 ### 실습2 - 회귀_공공자전거 수요 예측
 
 file name:
