@@ -41,3 +41,72 @@ https://www.kaggle.com/competitions/bike-sharing-demand/data
 교차 검증
 k-fold cross validation
 
+## 분류류
+
+### 실습3 - 붓꽃 품종 예측
+
+file name:
+classification_iris_species.ipynb
+
+데이터 수집
+sklearn에서 제공하는 샘플 데이터 셋
+
+목표:
+붓꽃의 특성(꽃잎의 길이와 너비, 꽃받침의 길이와 너비)를 기반으로 붓꽃의 품종을 예측
+
+Desicion Tree
+Random Forest
+트리 시각화
+교차 검증
+k-fold cross validation
+stratifiedkfold
+
+하이퍼 파라미터 튜닝
+GridSearchCV
+
+### 실습4 - 로켓발사
+
+file name:
+12_로켓발사_실습.ipynb
+
+
+목표:
+여러가지 속성을 바탕으로 로켓 발사 성공 여부 예측
+
+Decision Tree
+독립변수 레이블 인코딩
+변수 선택
+불균형 데이터 처리-오버샘플링
+GridSearchCV로 최적의 depth 찾기
+
+## 군집 코딩
+
+### 실습5 - 군집화 실습
+
+file name:
+20_군집화_실습.ipynb
+
+
+목표:
+군집화 실습습
+
+
+k-means
+ellblow 방법 - inertia 사용
+DBSCAN
+
+
+### 실습6 - 프로야구 군집화 실습습
+
+file name:
+22_군집화_프로야구_실습.ipynb
+
+
+목표:
+야구 타자의 능력 수치를 바탕으로 내년 스카웃 결정
+
+
+k-means
+ellblow 방법 - inertia 사용
+실루엣(silhouette)
+PCA
