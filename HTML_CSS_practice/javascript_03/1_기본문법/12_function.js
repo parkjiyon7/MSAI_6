@@ -17,8 +17,8 @@ console.log(add2(1, 2));
 console.log("====================");
 
 //화살표 함수
+
 const add3 = (x, y) => {
   return x + y;
 };
-
 console.log(add3(5, 6));
