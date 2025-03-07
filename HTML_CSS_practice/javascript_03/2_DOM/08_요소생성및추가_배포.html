@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="web">
+      <li class="html">html</li>
+      <li class="css">css</li>
+      <li class="js">javascript</li>
+    </ul>
+    <script>
+      function createLi(text) {
+        // 새로운 li 요소 생성
+        const $li = document.createElement("li");
+        console.log($li);
+
+        // 속성 추가
+        $li.setAttribute("class", text);
+
+        // 텍스트 노드 생성 - python
+        const $text = document.createTextNode(text);
+        console.log($text);
+
+        // dom tree에 추가
+
+        // ul에 li 추가
+        const $ul = document.querySelector("ul");
+        $ul.appendChild($li);
+
+        // li에 text 노드 추가
+        $li.appendChild($text);
+      }
+
+      createLi("python");
+      createLi("java");
+      createLi("c");
+
+      // 노드 삭제
+      document.querySelector(".css").remove();
+    </script>
+  </body>
+</html>
