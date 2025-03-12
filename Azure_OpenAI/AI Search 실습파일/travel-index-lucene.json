@@ -1,0 +1,76 @@
+{
+  "name": "travel-index-lucene",
+  "fields": [
+    {
+      "name": "id",
+      "type": "Edm.String",
+      "key": true
+    },
+    {
+      "name": "name",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "address",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "latitude",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "longitude",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "type",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "type_number",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "telephone",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "theme",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "has_parkinglot",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "parkinglot_count",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "homepage",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "description",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    }
+  ]
+}
