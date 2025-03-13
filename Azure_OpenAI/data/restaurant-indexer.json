@@ -1,0 +1,82 @@
+{
+  "name": "restaurant-indexer",
+  "description": null,
+  "dataSourceName": "restaurant-data",
+  "skillsetName": null,
+  "targetIndexName": "restaurant-index-lucene",
+  "disabled": null,
+  "schedule": null,
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": null,
+    "maxFailedItemsPerBatch": null,
+    "base64EncodeKeys": null,
+    "configuration": {
+      "indexedFileNameExtensions": ".csv",
+      "parsingMode": "delimitedText",
+      "firstLineContainsHeaders": true,
+      "dataToExtract": "contentAndMetadata",
+      "allowSkillsetToReadFileData": false
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "식당(ID)",
+      "targetFieldName": "id",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "식당명",
+      "targetFieldName": "name",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "지점명",
+      "targetFieldName": "branch_name",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "도로명주소",
+      "targetFieldName": "road_address",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "지번주소",
+      "targetFieldName": "region_address",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "식당위도",
+      "targetFieldName": "latitude",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "식당경도",
+      "targetFieldName": "longitude",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "식당대표전화번호",
+      "targetFieldName": "phoneno",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "영업신고증업태명",
+      "targetFieldName": "category",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "영업인허가명",
+      "targetFieldName": "assignedtype",
+      "mappingFunction": null
+    },
+    {
+      "sourceFieldName": "식당소개내용",
+      "targetFieldName": "description",
+      "mappingFunction": null
+    }
+  ],
+  "outputFieldMappings": [],
+  "cache": null,
+  "encryptionKey": null
+}

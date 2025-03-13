@@ -1,0 +1,66 @@
+{
+  "name": "restaurant-index-lucene",
+  "fields": [
+    {
+      "name": "id",
+      "type": "Edm.String",
+      "key": true
+    },
+    {
+      "name": "name",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "branch_name",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "road_address",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "region_address",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "latitude",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "longitude",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "phoneno",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    },
+    {
+      "name": "category",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "assignedtype",
+      "type": "Edm.String",
+      "key": false
+    },
+    {
+      "name": "description",
+      "type": "Edm.String",
+      "analyzer": "ko.lucene",
+      "key": false
+    }
+  ]
+}
