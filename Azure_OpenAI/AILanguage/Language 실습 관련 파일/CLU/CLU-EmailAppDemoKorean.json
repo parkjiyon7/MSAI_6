@@ -1,0 +1,271 @@
+{  
+    "projectFileVersion": "2022-05-01",  
+    "stringIndexType": "Utf16CodeUnit",  
+    "metadata": {  
+        "projectKind": "Conversation",  
+        "settings": {  
+            "confidenceThreshold": 0.7  
+        },  
+        "projectName": "이메일앱데모",  
+        "multilingual": true,  
+        "description": "이메일과 관련된 다양한 명령어를 다룰 수 있는 대화형 프로젝트입니다.",  
+        "language": "ko-kr"  
+    },  
+    "assets": {  
+        "projectKind": "Conversation",  
+        "intents": [  
+            {  
+                "category": "플래그추가"  
+            },  
+            {  
+                "category": "더추가하기"  
+            },  
+            {  
+                "category": "취소"  
+            },  
+            {  
+                "category": "메시지확인"  
+            },  
+            {  
+                "category": "확인"  
+            },  
+            {  
+                "category": "삭제"  
+            },  
+            {  
+                "category": "전달"  
+            },  
+            {  
+                "category": "최근텍스트질문"  
+            },  
+            {  
+                "category": "큰소리로읽기"  
+            },  
+            {  
+                "category": "답장"  
+            },  
+            {  
+                "category": "메시지검색"  
+            },  
+            {  
+                "category": "이메일보내기"  
+            },  
+            {  
+                "category": "다음보기"  
+            },  
+            {  
+                "category": "이전보기"  
+            },  
+            {  
+                "category": "해당없음"  
+            }  
+        ],  
+        "entities": [  
+            {  
+                "category": "첨부파일",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "카테고리",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "연락처이름",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "날짜",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "이메일제목",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "관계명",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "줄",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "메시지",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "순서참조",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "위치참조",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "검색텍스트",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "발신자이름",  
+                "compositionSetting": "returnLongestOverlap"  
+            },  
+            {  
+                "category": "시간",  
+                "compositionSetting": "returnLongestOverlap"  
+            }  
+        ],  
+        "utterances": [  
+            {  
+                "text": "삭제",  
+                "language": "ko-kr",  
+                "intent": "삭제",  
+                "entities": [],  
+                "dataset": "Train"  
+            },  
+            {  
+                "text": "플래그 추가해줘",  
+                "language": "ko-kr",  
+                "intent": "플래그추가",  
+                "entities": []  
+            },  
+            {  
+                "text": "이 이메일을 읽어주세요",  
+                "language": "ko-kr",  
+                "intent": "큰소리로읽기",  
+                "entities": []  
+            },  
+            {  
+                "text": "취소해주세요",  
+                "language": "ko-kr",  
+                "intent": "취소",  
+                "entities": []  
+            },  
+            {  
+                "text": "플래그를 새로 추가해주세요.",  
+                "language": "ko-kr",  
+                "intent": "플래그추가",  
+                "entities": []  
+            },  
+            {  
+                "text": "확인했으니 보내주세요.",  
+                "language": "ko-kr",  
+                "intent": "확인",  
+                "entities": []  
+            },  
+            {  
+                "text": "정확합니다. 지금 진행하세요.",  
+                "language": "ko-kr",  
+                "intent": "확인",  
+                "entities": []  
+            },  
+            {  
+                "text": "이메일 삭제를 중단해주세요.",  
+                "language": "ko-kr",  
+                "intent": "취소",  
+                "entities": []  
+            },  
+            {  
+                "text": "이메일에 파일 하나 추가해주세요.",  
+                "language": "ko-kr",  
+                "intent": "더추가하기",  
+                "entities": [  
+                    {  
+                        "category": "첨부파일",  
+                        "offset": 10,  
+                        "length": 2  
+                    }  
+                ]  
+            },  
+            {  
+                "text": "여기에 플래그를 추가해주세요.",  
+                "language": "ko-kr",  
+                "intent": "플래그추가",  
+                "entities": []  
+            },  
+            {  
+                "text": "방금 받은 이메일을 알려주세요.",  
+                "language": "ko-kr",  
+                "intent": "최근텍스트질문",  
+                "entities": [  
+                    {  
+                        "category": "시간",  
+                        "offset": 3,  
+                        "length": 2  
+                    }  
+                ]  
+            },  
+            {  
+                "text": "다음 메일 보여줘",  
+                "language": "ko-kr",  
+                "intent": "다음보기",  
+                "entities": [  
+                    {  
+                        "category": "순서참조",  
+                        "offset": 0,  
+                        "length": 2  
+                    }  
+                ]  
+            },  
+            {  
+                "text": "이전 메일로 돌아가줘",  
+                "language": "ko-kr",  
+                "intent": "이전보기",  
+                "entities": [  
+                    {  
+                        "category": "순서참조",  
+                        "offset": 0,  
+                        "length": 2  
+                    }  
+                ]  
+            },  
+            {  
+                "text": "새 메시지가 있나요?",  
+                "language": "ko-kr",  
+                "intent": "메시지확인",  
+                "entities": [  
+                    {  
+                        "category": "카테고리",  
+                        "offset": 2,  
+                        "length": 4  
+                    }  
+                ]  
+            },  
+            {  
+                "text": "이 이메일을 삭제해줘",  
+                "language": "ko-kr",  
+                "intent": "삭제",  
+                "entities": []  
+            },  
+            {  
+                "text": "이메일을 검색해주세요.",  
+                "language": "ko-kr",  
+                "intent": "메시지검색",  
+                "entities": [  
+                    {  
+                        "category": "검색텍스트",  
+                        "offset": 3,  
+                        "length": 3  
+                    }  
+                ]  
+            },  
+            {  
+                "text": "이 메시지를 전달해줘",  
+                "language": "ko-kr",  
+                "intent": "전달",  
+                "entities": []  
+            },  
+            {  
+                "text": "새 이메일을 작성해주세요.",  
+                "language": "ko-kr",  
+                "intent": "이메일보내기",  
+                "entities": []  
+            },  
+            {  
+                "text": "답장해줘",  
+                "language": "ko-kr",  
+                "intent": "답장",  
+                "entities": []  
+            }  
+        ]  
+    }  
+}  
