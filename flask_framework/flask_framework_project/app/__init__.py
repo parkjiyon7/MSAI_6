@@ -1,10 +1,46 @@
 from flask import Flask
-app = Flask(__name__)
+# from flask_migrate import Migrate
+# from flask_sqlalchemy import SQLAlchemy
+import config
+from app.database import db, migrate
+import os
 
-from .views import main_view, auth_view, board_view
-app.register_blueprint(main_view.bp)
-app.register_blueprint(auth_view.bp)
-app.register_blueprint(board_view.bp)
+import logging
+from logging.handlers import RotatingFileHandler
+
+
+def create_app(): 
+    app = Flask(__name__)
+
+    app.config.from_object(config)
+    # 데이터 베이스 - 앱 연결
+    db.init_app(app)
+    # 데이터베이스 연결 ORM(라이브러리)
+    migrate.init_app(app, db)
+
+    # DB 모델 import
+    from app import models
+
+    from .views import main_view, auth_view, board_view, sql_view
+    app.register_blueprint(main_view.bp)
+    app.register_blueprint(auth_view.bp)
+    app.register_blueprint(board_view.bp)
+    # app.register_blueprint(sql_view.bp)
+
+
+    # log용 파일 생성
+    if not os.path.exists('logs'):
+        os.makedirs('logs')
+
+    log_file = RotatingFileHandler('logs/app.log', maxBytes= 10420, backupCount=10, encoding='utf-8')
+    log_file.setLevel(logging.DEBUG)
+
+    app.logger.addHandler(log_file)
+    app.logger.setLevel(logging.DEBUG)
+    app.logger.info("app이 구동되었음")
+
+
+    return app
 
 
 # from .views import auth_view

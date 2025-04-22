@@ -1,0 +1,56 @@
+app이 구동되었음
+app이 구동되었음
+app이 구동되었음
+Exception on /sql/create/ [GET]
+Traceback (most recent call last):
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/flask_framework_project/app/views/sql_view.py", line 25, in create
+    db.session(q)
+    ~~~~~~~~~~^^^
+TypeError: scoped_session.__call__() takes 1 positional argument but 2 were given
+app이 구동되었음
+app이 구동되었음
+Exception on /sql/read/ [GET]
+Traceback (most recent call last):
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/flask_framework_project/app/views/sql_view.py", line 34, in read
+    result += f'{q.id} : {q.subject}<br>'
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'result' where it is not associated with a value
+app이 구동되었음
+app이 구동되었음
+Exception on /sql/update/ [GET]
+Traceback (most recent call last):
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/flask_framework_project/app/views/sql_view.py", line 45, in update
+    if q in None:
+       ^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
+app이 구동되었음
+app이 구동되었음
+app이 구동되었음
+app이 구동되었음
