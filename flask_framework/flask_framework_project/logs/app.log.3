@@ -1,0 +1,82 @@
+Exception on /auth/signup/ [GET]
+Traceback (most recent call last):
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/flask_framework_project/app/views/auth_view.py", line 13, in signup
+    form = UserCreateForm()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/wtforms/form.py", line 209, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask_wtf/form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/wtforms/form.py", line 287, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/wtforms/form.py", line 128, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask_wtf/csrf.py", line 147, in generate_csrf_token
+    return generate_csrf(
+        secret_key=self.meta.csrf_secret, token_key=self.meta.csrf_field_name
+    )
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask_wtf/csrf.py", line 36, in generate_csrf
+    secret_key = _get_config(
+        secret_key,
+    ...<2 lines>...
+        message="A secret key is required to use CSRF.",
+    )
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask_wtf/csrf.py", line 136, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+Exception on /auth/login/ [GET]
+Traceback (most recent call last):
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/flask_framework_project/app/views/auth_view.py", line 31, in login
+    form = UserLoginForm()
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/wtforms/form.py", line 209, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask_wtf/form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/wtforms/form.py", line 287, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/wtforms/form.py", line 128, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask_wtf/csrf.py", line 147, in generate_csrf_token
+    return generate_csrf(
+        secret_key=self.meta.csrf_secret, token_key=self.meta.csrf_field_name
+    )
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask_wtf/csrf.py", line 36, in generate_csrf
+    secret_key = _get_config(
+        secret_key,
+    ...<2 lines>...
+        message="A secret key is required to use CSRF.",
+    )
+  File "/Users/parkjiyon/Desktop/MSAI6/GitHubConnect/flask_framework/venvs/flask_framwork_project/lib/python3.13/site-packages/flask_wtf/csrf.py", line 136, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.

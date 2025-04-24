@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4">내 질문 목록</h2>
+
+  {% if question_list %}
+  <ul class="list-group shadow-sm">
+    {% for question in question_list %}
+    <li class="list-group-item">
+      <a
+        href="{{ url_for('question.detail', question_id=question.id) }}"
+        class="text-decoration-none text-dark"
+      >
+        <div class="d-flex justify-content-between">
+          <h5 class="mb-1">{{ question.subject }}</h5>
+          <small class="text-muted"
+            >{{ question.create_date.strftime('%Y-%m-%d %H:%M') }}</small
+          >
+        </div>
+        <p class="mb-1 text-secondary">
+          {{ question.content | truncate(100, True, '...') }}
+        </p>
+        {% if question.modify_date %}
+        <small class="text-muted"
+          >수정일: {{ question.modify_date.strftime('%Y-%m-%d %H:%M') }}</small
+        >
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="alert alert-info mt-4">작성한 질문이 없습니다.</div>
+  {% endif %}
+</div>
+{% endblock %}

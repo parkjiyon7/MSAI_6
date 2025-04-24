@@ -12,7 +12,8 @@ from logging.handlers import RotatingFileHandler
 def create_app(): 
     app = Flask(__name__)
 
-    app.config.from_object(config)
+    #app.config.from_object(config)
+    app.config.from_envvar('APP_CONFIG_FILE')
     # 데이터 베이스 - 앱 연결
     db.init_app(app)
     # 데이터베이스 연결 ORM(라이브러리)
@@ -21,11 +22,14 @@ def create_app():
     # DB 모델 import
     from app import models
 
-    from .views import main_view, auth_view, board_view, sql_view
+    from .views import main_view, auth_view, board_view, sql_view, question_view, answer_view, auth_view, mypage_view
     app.register_blueprint(main_view.bp)
     app.register_blueprint(auth_view.bp)
     app.register_blueprint(board_view.bp)
     # app.register_blueprint(sql_view.bp)
+    app.register_blueprint(question_view.bp)
+    app.register_blueprint(answer_view.bp)
+    app.register_blueprint(mypage_view.bp)
 
 
     # log용 파일 생성

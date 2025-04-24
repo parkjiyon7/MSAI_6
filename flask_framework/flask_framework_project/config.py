@@ -9,3 +9,6 @@ SQLALCHEMY_TRACK_MODIFICATIONS  = False
 
 # 명령문 수행 보기(SQL문)
 SQLALCHEMY_ECHO = True
+
+#token_urlsafe(64)
+SECRET_KEY='dev'
